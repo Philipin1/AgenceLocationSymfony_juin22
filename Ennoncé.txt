@@ -1,0 +1,40 @@
+1) crée le projet symfony "AgenceLocation" (assurez vous qu'il soit bien crée et fonctionnel)
+
+2) créez la base de donnée (agence_loc)
+
+3) créez l'entité "Vehicule" avec les informations suivantes :
+        - titre (string, 255, not null)
+        - marque (string, 100, not null)
+        - model (string, 100, not null)
+        - description (text, not null)
+        - photo (string, 255, nullable)
+        - prixJournalier (integer, not null)
+        - dateEnregistrtement (datetime, not null)
+
+4) créez tout le crud necessaire pour le Vehicule
+
+
+
+
+
+------------------------   Etapes  -------------------------------
+
+1) Pour creéer le projet, ouvrir nouvelle fenêtre vscode dans symfony
+- taper : symphony new Nom_du_projet
+(Attention: il peut avoir deux terminaux ouverts; server + commande )
+(Si Erreur, lire les propositions de solution)
+Ensuite changer l'URL dans .env et lui attribuer un nom de base 
+
+2) Pour créer la base de données
+-  taper : symfony console doctrine:database:create
+
+3) Pour créer l'entité Vehicule 
+- taper : symfony console make:entity Vehicule
+
+4) créer fichier de migration 
+- taper : symfony console make:migration
+          symfony console doctrine:migrations:migrate
+
+
+5) le fichier controller
+-  taper : symfony console make:controller
